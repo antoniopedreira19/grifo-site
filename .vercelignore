@@ -1,0 +1,12 @@
+# Material de referência — não publicar
+docs/
+
+# Editor/SO
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log

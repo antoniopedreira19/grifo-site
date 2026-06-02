@@ -1,0 +1,481 @@
+/* ============================================================
+   GRIFO — Página Áreas de Atuação
+   ============================================================ */
+
+/* Hero pills with icons override */
+.ar-hero__pill { gap: 12px; padding-left: 14px; }
+.ar-hero__pill-icon {
+  width: 18px; height: 18px;
+  display: inline-flex; align-items: center; justify-content: center;
+  color: var(--grifo-gold-bright);
+}
+.ar-hero__pill-icon svg { width: 100%; height: 100%; }
+
+/* ============================================================
+   SECTOR BLOCK
+   ============================================================ */
+.ar-sector {
+  padding: 120px 0;
+  scroll-margin-top: 24px;
+  position: relative;
+}
+.ar-sector--bone  { background: var(--grifo-bone); }
+.ar-sector--white { background: #ffffff; }
+.ar-sector--cream { background: var(--grifo-cream); }
+
+.ar-sector__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.ar-sector--photo-left .ar-sector__photo  { order: 1; }
+.ar-sector--photo-left .ar-sector__copy   { order: 2; }
+.ar-sector--photo-right .ar-sector__photo { order: 2; }
+.ar-sector--photo-right .ar-sector__copy  { order: 1; }
+
+.ar-sector__photo {
+  position: relative;
+  background: var(--grifo-navy-soft);
+  border-radius: 4px;
+  overflow: hidden;
+  min-height: 520px;
+}
+.ar-sector__photo svg { width: 100%; height: 100%; display: block; }
+.ar-sector__photo-tag {
+  position: absolute;
+  top: 18px; left: 18px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: var(--grifo-gold);
+  color: var(--grifo-navy-deep);
+}
+
+/* Copy */
+.ar-sector__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(28px, 3.6vw, 44px);
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--grifo-navy);
+  margin: 18px 0 18px;
+  text-wrap: balance;
+}
+.ar-sector__body {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--grifo-graphite);
+  margin: 0 0 24px;
+  max-width: 540px;
+}
+
+/* Tag list */
+.ar-sector__taglist {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.ar-sector__tag {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 10.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--grifo-gold);
+  color: var(--grifo-gold);
+  background: transparent;
+  transition: all 200ms var(--ease-out);
+  cursor: default;
+}
+.ar-sector__tag:hover {
+  background: var(--grifo-gold);
+  color: var(--grifo-navy-deep);
+}
+
+/* Diffs */
+.ar-sector__diffs {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+.ar-sector__diff {
+  background: #ffffff;
+  border-left: 3px solid var(--grifo-gold);
+  padding: 16px 20px;
+  border-radius: 0 4px 4px 0;
+}
+.ar-sector--white .ar-sector__diff {
+  background: var(--grifo-bone);
+}
+.ar-sector--cream .ar-sector__diff {
+  background: #ffffff;
+}
+.ar-sector__diff h4 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 15.5px;
+  color: var(--grifo-navy);
+  margin: 0 0 6px;
+}
+.ar-sector__diff p {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--grifo-graphite);
+  margin: 0;
+}
+
+/* Mini case card */
+.ar-sector__minicase {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 24px;
+  align-items: center;
+  padding: 18px 22px;
+  border: 1px solid var(--border-2);
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 4px;
+  margin-bottom: 24px;
+  text-decoration: none;
+  transition: all 200ms var(--ease-out);
+}
+.ar-sector__minicase:hover {
+  background: #ffffff;
+  border-color: var(--grifo-gold);
+  transform: translateX(2px);
+}
+.ar-sector__minicase-lab {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--grifo-gold);
+}
+.ar-sector__minicase-body { display: flex; flex-direction: column; gap: 2px; }
+.ar-sector__minicase-body strong {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--grifo-navy);
+}
+.ar-sector__minicase-body span {
+  font-size: 14px;
+  color: var(--grifo-graphite);
+}
+.ar-sector__minicase-body .meta {
+  font-family: var(--font-display);
+  font-size: 10.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--grifo-gold);
+  margin-top: 4px;
+}
+.ar-sector__minicase-arrow {
+  color: var(--grifo-navy);
+  transition: transform 200ms;
+}
+.ar-sector__minicase:hover .ar-sector__minicase-arrow {
+  color: var(--grifo-gold);
+  transform: translateX(4px);
+}
+
+/* ============================================================
+   MAP — navy slab with SVG Brazil + city list
+   ============================================================ */
+.ar-map {
+  background: var(--grifo-navy);
+  color: var(--grifo-bone);
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+}
+.ar-map__head {
+  max-width: 720px;
+  margin: 0 auto 56px;
+  text-align: center;
+}
+.ar-map__head .eyebrow { justify-content: center; }
+.ar-map__head .eyebrow::before { display: none; }
+.ar-map__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(30px, 3.6vw, 48px);
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--grifo-bone);
+  margin: 18px 0 0;
+  text-wrap: balance;
+}
+.ar-map__title em {
+  font-style: normal;
+  color: var(--grifo-gold-bright);
+}
+
+.ar-map__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.ar-map__viz {
+  position: relative;
+  width: 100%;
+}
+
+/* ============================================================
+   Brasil SVG container — loaded from assets/grifo-brasil-mapa.svg
+   ============================================================ */
+.ar-map__brasil {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.ar-map__brasil svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+/* All 27 states — outline only by default (inactive) */
+.ar-map__brasil .uf {
+  fill: rgba(245, 241, 234, 0.04);
+  stroke: rgba(245, 241, 234, 0.55);
+  stroke-width: 1;
+  stroke-linejoin: round;
+  transition: fill 220ms ease, stroke 220ms ease, fill-opacity 220ms ease;
+}
+
+/* 8 active states — gold fill */
+.ar-map__brasil .uf--ativo {
+  fill: var(--grifo-gold);
+  fill-opacity: 0.32;
+  stroke: var(--grifo-gold-bright);
+  stroke-width: 1.4;
+  cursor: pointer;
+}
+.ar-map__brasil .uf--ativo:hover,
+.ar-map__brasil .uf--ativo.is-hover {
+  fill-opacity: 0.62;
+  stroke: var(--grifo-gold-bright);
+  stroke-width: 1.8;
+}
+
+/* Markers */
+.ar-map__brasil .mk {
+  cursor: pointer;
+  transition: transform 220ms ease;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+.ar-map__brasil .mk-glow {
+  fill: var(--grifo-gold);
+  fill-opacity: 0.22;
+  animation: ar-map-pulse 2.6s ease-in-out infinite;
+}
+.ar-map__brasil .mk-dot {
+  fill: var(--grifo-gold-bright);
+  stroke: var(--grifo-bone);
+  stroke-width: 1;
+}
+.ar-map__brasil .mk-core {
+  fill: var(--grifo-navy-deep);
+}
+.ar-map__brasil .mk-label {
+  fill: var(--grifo-bone);
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  paint-order: stroke fill;
+  stroke: var(--grifo-navy-deep);
+  stroke-width: 3px;
+  stroke-linejoin: round;
+}
+
+/* BA sede ring (extra outer ring) */
+.ar-map__brasil .mk[data-uf="BA"] .mk-ring-sede {
+  fill: none;
+  stroke: var(--grifo-gold-bright);
+  stroke-width: 1.2;
+  stroke-opacity: 0.7;
+  animation: ar-map-pulse-ring 2.6s ease-in-out infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+/* Hover state on markers (mirror from list) */
+.ar-map__brasil .mk.is-hover .mk-glow { fill-opacity: 0.55; }
+.ar-map__brasil .mk.is-hover .mk-dot {
+  stroke-width: 1.6;
+  fill: var(--grifo-gold-bright);
+}
+.ar-map__brasil .mk.is-hover { transform: scale(1.12); }
+
+@keyframes ar-map-pulse {
+  0%, 100% { fill-opacity: 0.22; }
+  50%      { fill-opacity: 0.55; }
+}
+@keyframes ar-map-pulse-ring {
+  0%, 100% { stroke-opacity: 0.7; transform: scale(1); }
+  50%      { stroke-opacity: 0.15; transform: scale(1.35); }
+}
+
+.ar-map__list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.ar-map__list-lab {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--grifo-gold-bright);
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(245, 241, 234, 0.14);
+}
+.ar-map__list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.ar-map__list li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(245, 241, 234, 0.08);
+}
+.ar-map__list li:last-child { border-bottom: 0; }
+.ar-map__list li strong {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--grifo-bone);
+}
+.ar-map__list li span {
+  font-family: var(--font-display);
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(245, 241, 234, 0.55);
+}
+
+.ar-map__list li.ar-map__state {
+  cursor: pointer;
+  border-left: 2px solid transparent;
+  padding: 10px 14px 10px 12px;
+  margin-left: -14px;
+  border-radius: 2px;
+  transition: background 200ms ease, border-color 200ms ease;
+}
+.ar-map__list li.ar-map__state:hover,
+.ar-map__list li.ar-map__state.is-hover {
+  background: rgba(196, 154, 69, 0.08);
+  border-left-color: var(--grifo-gold-bright);
+}
+
+/* Enriched state items (head + cities + context) */
+.ar-map__list li .ar-map__state-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 2px;
+}
+.ar-map__list li .ar-map__state-sigla {
+  font-family: "Disket Mono", monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--grifo-gold-bright);
+  text-transform: uppercase;
+}
+.ar-map__list li .ar-map__state-cities {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: rgba(245, 241, 234, 0.82);
+  margin-top: 2px;
+}
+.ar-map__list li .ar-map__state-context {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(245, 241, 234, 0.55);
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+.ar-map__quote {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.6;
+  color: rgba(245, 241, 234, 0.82);
+  max-width: 640px;
+  margin: 56px auto 0;
+  text-align: center;
+  font-style: italic;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1180px) {
+  .ar-sector { padding: 96px 0; }
+  .ar-map { padding: 96px 0; }
+  .ar-sector__grid { gap: 48px; }
+}
+@media (max-width: 1024px) {
+  .ar-sector { padding: 80px 0; }
+  .ar-map { padding: 80px 0; }
+  .ar-sector__grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .ar-sector--photo-left .ar-sector__photo,
+  .ar-sector--photo-right .ar-sector__photo { order: -1; }
+  .ar-sector__photo { min-height: 360px; }
+  .ar-map__grid { grid-template-columns: 1fr; gap: 48px; }
+  .ar-map__brasil { max-width: 420px; }
+}
+@media (max-width: 720px) {
+  .ar-sector { padding: 64px 0; }
+  .ar-map { padding: 64px 0; }
+  .ar-sector__title { font-size: 26px; }
+  .ar-sector__photo { min-height: 240px; }
+  .ar-sector__tag { font-size: 10px; padding: 5px 10px; letter-spacing: 0.12em; }
+  .ar-sector__minicase { grid-template-columns: 1fr; gap: 8px; padding: 16px 18px; }
+  .ar-sector__minicase-arrow { display: none; }
+  .ar-map__title { font-size: 26px; }
+  .ar-map__brasil { max-width: 100%; }
+  .ar-map__brasil .mk-label { font-size: 22px; }
+  .ar-hero__pill-icon { width: 16px; height: 16px; }
+}

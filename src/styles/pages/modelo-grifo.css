@@ -1,0 +1,297 @@
+/* ============================================================
+   GRIFO Engenharia — Página Modelo Grifo (estilos próprios)
+   Reutiliza: .page-hero, .mn-editorial, .mn-method, .mn-pillar,
+              .sol--navy (carregados via styles.css + manifesto.css + solucoes.css)
+   ============================================================ */
+
+/* ---- editorial: pequeno ajuste para mais respiro ---- */
+.mg-editorial { background: var(--grifo-bone); }
+
+/* ============================================================
+   7 ETAPAS
+   ============================================================ */
+.mg-stages {
+  background: var(--grifo-cream);
+  padding: 96px 0 104px;
+  position: relative;
+}
+.mg-stages__head { max-width: 760px; margin-bottom: 64px; }
+.mg-stages__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(28px, 3vw, 44px);
+  line-height: 1.1;
+  margin: 18px 0 18px;
+  color: var(--grifo-navy);
+}
+.mg-stages__sub {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--grifo-navy-soft);
+  max-width: 620px;
+}
+
+.mg-stages__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px 24px;
+  counter-reset: stage;
+}
+.mg-stage {
+  position: relative;
+  background: var(--grifo-bone);
+  border: 1px solid rgba(21, 38, 58, 0.08);
+  border-left: 3px solid var(--grifo-gold);
+  padding: 22px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.mg-stage__num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  color: var(--grifo-gold);
+}
+.mg-stage__name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 1.15;
+  color: var(--grifo-navy);
+  margin: 0;
+}
+.mg-stage__body {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--grifo-navy-soft);
+  margin: 0;
+}
+.mg-stage__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 4px;
+  padding-top: 10px;
+  border-top: 1px dashed rgba(21, 38, 58, 0.12);
+  font-family: var(--font-body);
+  font-size: 12.5px;
+}
+.mg-stage__meta .lab {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--grifo-gold-deep);
+}
+.mg-stage__meta--out .lab { color: #8a4a3a; }
+.mg-stage__meta--out span:last-child { color: #6b3a2c; font-style: italic; }
+.mg-stage__connector {
+  position: absolute;
+  right: -16px;
+  top: 30px;
+  width: 12px;
+  height: 1px;
+  background: var(--grifo-gold);
+  opacity: 0.5;
+}
+
+@media (max-width: 1180px) {
+  .mg-stages__list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .mg-stage__connector { display: none; }
+}
+@media (max-width: 820px) {
+  .mg-stages__list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 540px) {
+  .mg-stages__list { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   6 PILARES — override do mn-method para 3 colunas (era 2)
+   ============================================================ */
+.mg-pillars__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px 32px;
+}
+@media (max-width: 1024px) {
+  .mg-pillars__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .mg-pillars__grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   TABELA PROBLEMA × SOLUÇÃO
+   ============================================================ */
+.mg-resolve {
+  background: var(--grifo-bone);
+  padding: 96px 0 104px;
+}
+.mg-resolve__head { max-width: 760px; margin-bottom: 48px; }
+.mg-resolve__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1.1;
+  margin: 18px 0 0;
+  color: var(--grifo-navy);
+}
+
+.mg-resolve__table {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(21, 38, 58, 0.14);
+}
+.mg-resolve__theader,
+.mg-resolve__row {
+  display: grid;
+  grid-template-columns: 1fr 60px 1fr;
+  align-items: center;
+  border-bottom: 1px solid rgba(21, 38, 58, 0.14);
+}
+.mg-resolve__theader {
+  padding: 18px 8px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.mg-resolve__theader > div:first-child { color: #8a4a3a; }
+.mg-resolve__theader > div:last-child  {
+  color: var(--grifo-gold-deep);
+  grid-column: 3;
+}
+.mg-resolve__row {
+  padding: 22px 8px;
+  gap: 12px;
+}
+.mg-resolve__problem,
+.mg-resolve__solution {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.45;
+}
+.mg-resolve__problem { color: var(--grifo-navy-soft); }
+.mg-resolve__solution { color: var(--grifo-navy); font-weight: 500; }
+.mg-resolve__bullet {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px; height: 22px;
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.mg-resolve__problem .mg-resolve__bullet {
+  background: rgba(138, 74, 58, 0.12);
+  color: #8a4a3a;
+}
+.mg-resolve__solution .mg-resolve__bullet {
+  background: var(--grifo-gold);
+  color: var(--grifo-navy-deep);
+}
+.mg-resolve__arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--grifo-gold);
+}
+
+@media (max-width: 720px) {
+  .mg-resolve__theader,
+  .mg-resolve__row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .mg-resolve__theader > div:last-child { grid-column: auto; }
+  .mg-resolve__arrow { transform: rotate(90deg); margin: 4px 0; }
+  .mg-resolve__row { padding: 18px 4px; }
+}
+
+/* ============================================================
+   BHAG — pequenos ajustes sobre sol--navy
+   ============================================================ */
+.mg-bhag__metric {
+  margin: 36px auto 32px;
+  padding: 28px 36px;
+  border: 1px solid rgba(245, 241, 234, 0.18);
+  border-radius: 4px;
+  background: rgba(245, 241, 234, 0.04);
+  display: inline-flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+}
+.mg-bhag__metric .num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(36px, 5vw, 56px);
+  line-height: 1;
+  color: var(--grifo-gold-bright);
+  letter-spacing: -0.01em;
+}
+.mg-bhag__metric .lab {
+  font-family: var(--font-body);
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: rgba(245, 241, 234, 0.78);
+  max-width: 360px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* ============================================================
+   FECHAMENTO
+   ============================================================ */
+.mg-closure {
+  background: var(--grifo-bone);
+  padding: 96px 0 120px;
+}
+.mg-closure__text {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: left;
+}
+.mg-closure__text p {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 1.55;
+  color: var(--grifo-navy);
+  margin: 0 0 28px;
+  text-wrap: pretty;
+}
+.mg-closure__hit {
+  font-family: var(--font-display) !important;
+  font-style: italic;
+  font-weight: 500 !important;
+  font-size: 26px !important;
+  color: var(--grifo-navy-deep) !important;
+  border-left: 3px solid var(--grifo-gold);
+  padding-left: 24px;
+  margin: 32px 0 40px !important;
+}
+.mg-closure__cta { margin-top: 36px; }
+
+@media (max-width: 720px) {
+  .mg-closure { padding: 64px 0 80px; }
+  .mg-closure__text p { font-size: 18px; }
+  .mg-closure__hit { font-size: 20px !important; padding-left: 18px; }
+}

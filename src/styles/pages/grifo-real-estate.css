@@ -1,0 +1,243 @@
+/* ============================================================
+   GRIFO Engenharia — Página Grifo Real Estate
+   Reutiliza: .page-hero, .mn-editorial (via manifesto.css), .pill
+   ============================================================ */
+
+.re-editorial { background: var(--grifo-bone); }
+
+/* ============================================================
+   FRENTES — 2 cards
+   ============================================================ */
+.re-fronts {
+  background: var(--grifo-cream);
+  padding: 96px 0;
+}
+.re-fronts__head {
+  max-width: 760px;
+  margin-bottom: 56px;
+}
+.re-fronts__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1.1;
+  color: var(--grifo-navy);
+  margin: 18px 0 0;
+}
+.re-fronts__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+.re-front {
+  background: var(--grifo-bone);
+  border: 1px solid rgba(21, 38, 58, 0.08);
+  border-left: 3px solid var(--grifo-gold);
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.re-front__num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  color: var(--grifo-gold);
+}
+.re-front__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  color: var(--grifo-navy);
+  margin: 0;
+}
+.re-front__tag {
+  display: inline-block;
+  align-self: flex-start;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--grifo-gold-deep);
+  background: rgba(196, 154, 69, 0.12);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.re-front__body {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--grifo-navy-soft);
+  margin: 0;
+}
+@media (max-width: 720px) {
+  .re-fronts { padding: 64px 0; }
+  .re-fronts__grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   CASE DESTAQUE
+   ============================================================ */
+.re-case {
+  background: var(--grifo-bone);
+  padding: 96px 0;
+}
+.re-case__head {
+  max-width: 760px;
+  margin-bottom: 48px;
+}
+.re-case__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(26px, 2.6vw, 38px);
+  line-height: 1.1;
+  color: var(--grifo-navy);
+  margin: 18px 0 0;
+}
+.re-case__card {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 0;
+  border: 1px solid rgba(21, 38, 58, 0.08);
+  background: var(--grifo-bone);
+  overflow: hidden;
+}
+.re-case__photo {
+  position: relative;
+  min-height: 360px;
+  overflow: hidden;
+  background: var(--grifo-cream);
+}
+.re-case__photo > * {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.re-case__body {
+  padding: 40px 36px 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  justify-content: center;
+}
+.re-case__pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+.re-case .pill {
+  display: inline-block;
+  padding: 5px 11px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 10.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  border: 1px solid rgba(21, 38, 58, 0.18);
+  color: var(--grifo-navy-soft);
+  border-radius: 999px;
+}
+.re-case .pill.gold {
+  background: var(--grifo-gold);
+  color: var(--grifo-navy-deep);
+  border-color: transparent;
+}
+.re-case__name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.1;
+  color: var(--grifo-navy);
+  margin: 0;
+}
+.re-case__loc {
+  font-family: var(--font-mono, "Disket Mono", monospace);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--grifo-navy-soft);
+  margin: 0;
+}
+.re-case__desc {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--grifo-navy-soft);
+  margin: 8px 0 0;
+}
+@media (max-width: 820px) {
+  .re-case__card { grid-template-columns: 1fr; }
+  .re-case__photo { min-height: 280px; }
+}
+
+/* ============================================================
+   PRINCIPLE — bloco navy de citação
+   ============================================================ */
+.re-principle {
+  background: var(--grifo-navy-deep);
+  padding: 120px 0 128px;
+  position: relative;
+  overflow: hidden;
+  color: var(--grifo-bone);
+}
+.re-principle__watermark {
+  position: absolute;
+  right: -160px;
+  bottom: -80px;
+  width: 600px;
+  opacity: 0.08;
+  pointer-events: none;
+}
+.re-principle__inner {
+  position: relative;
+  max-width: 820px;
+  text-align: center;
+  margin: 0 auto;
+}
+.re-principle__mark {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 120px;
+  line-height: 0.8;
+  color: var(--grifo-gold);
+  margin-bottom: 16px;
+}
+.re-principle__quote {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(24px, 3vw, 38px);
+  line-height: 1.35;
+  color: var(--grifo-bone);
+  margin: 0 0 40px;
+  text-wrap: balance;
+}
+.re-principle__sig {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--grifo-gold-bright);
+}
+.re-principle__sig .rule {
+  display: inline-block;
+  width: 48px;
+  height: 1px;
+  background: var(--grifo-gold);
+}
+@media (max-width: 720px) {
+  .re-principle { padding: 80px 0; }
+  .re-principle__mark { font-size: 80px; }
+}

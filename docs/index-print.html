@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>GRIFO Construtora — Sua obra entregue no prazo. Seu negócio funcionando antes.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../src/styles/global.css">
+<link rel="icon" href="../assets/griffin-mark-navy.png">
+<style>
+  /* ===== PRINT-FRIENDLY OVERRIDES ===== */
+  @page {
+    size: A4 portrait;
+    margin: 12mm 10mm;
+  }
+
+  html, body {
+    background: var(--grifo-bone, #f5f1ea) !important;
+  }
+
+  /* Force background/color fidelity */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Disable motion + hover-only behaviour for print */
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* Avoid clipping of long content */
+  body, .hero, .hero-fb, .position, .sectors, .showcase, .manifesto,
+  .news, .ctaband, .footer {
+    overflow: visible !important;
+  }
+
+  /* Section-level page breaks: keep big blocks together when possible */
+  section, footer, .hero-fb, .hero, .position, .sectors, .showcase,
+  .manifesto, .news, .ctaband, .footer {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Force a new page before each major section so we get a clean
+     paged document rather than awkward mid-section cuts */
+  .position, .sectors, .showcase, .manifesto, .news, .ctaband, .footer {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  /* Cards should never break across pages */
+  .pos-card, .sector, .case-card, .news-card, .manifesto__panel,
+  .hero-card, .hero-fb__metric {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Fullbleed hero: it's designed to fill the viewport. For print,
+     let it size to content and remove min-heights/transforms. */
+  .hero-fb {
+    min-height: 0 !important;
+    height: auto !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+  .hero-fb__inner {
+    padding: 36px 36px 48px !important;
+  }
+  .hero-fb__photo {
+    position: absolute !important;
+  }
+
+  /* Hide UI controls that don't make sense on paper */
+  .hero__nav,
+  .hero-card__nav,
+  .hero__progress,
+  .showcase__nav,
+  .filters,
+  .news__dots,
+  .manifesto__panel-close,
+  .nav__burger,
+  [data-tweaks-panel],
+  .tweaks-panel,
+  .tweaks-panel-root,
+  #__tweaks_panel_root {
+    display: none !important;
+  }
+
+  /* Sticky/fixed elements break print layout */
+  .nav, .site-topnav, .topbar {
+    position: static !important;
+  }
+
+  /* Footer is dark — make sure colors print */
+  .footer, .ctaband, .showcase, .hero-fb {
+    color-adjust: exact;
+  }
+
+  /* Slight type compression so things fit comfortably on A4 */
+  body { font-size: 14px; }
+  h1 { font-size: 38px !important; line-height: 1.05 !important; }
+  h2 { font-size: 28px !important; line-height: 1.1 !important; }
+  h3 { font-size: 18px !important; }
+
+  /* Avoid orphaned headings */
+  h1, h2, h3 { break-after: avoid; page-break-after: avoid; }
+
+  /* Images should never exceed page width */
+  img { max-width: 100% !important; height: auto; }
+</style>
+</head>
+<body>
+<div id="app"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="../src/components/photos.jsx"></script>
+<script type="text/babel" src="../src/components/sections.jsx"></script>
+<script type="text/babel">
+  const { HeroFullbleed, Position, Sectors, Showcase, Manifesto, News, CTABand, Footer } = window.GrifoSite;
+
+  function App() {
+    React.useEffect(() => {
+      document.body.classList.add('hero-variant--fullbleed');
+    }, []);
+
+    return (
+      <>
+        <HeroFullbleed/>
+        <Position/>
+        <Sectors/>
+        <Showcase/>
+        <Manifesto/>
+        <News/>
+        <CTABand/>
+        <Footer/>
+      </>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('app')).render(<App/>);
+
+  // Auto-print once everything is settled
+  (async () => {
+    try { await document.fonts.ready; } catch (e) {}
+    // Wait for images
+    const imgs = Array.from(document.images || []);
+    await Promise.all(imgs.map((img) => {
+      if (img.complete) return Promise.resolve();
+      return new Promise((res) => {
+        img.addEventListener('load', res, { once: true });
+        img.addEventListener('error', res, { once: true });
+      });
+    }));
+    // Extra safety margin for React commit + layout
+    await new Promise((r) => setTimeout(r, 800));
+    window.print();
+  })();
+</script>
+</body>
+</html>

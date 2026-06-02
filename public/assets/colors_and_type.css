@@ -1,0 +1,239 @@
+/* ============================================================
+   GRIFO Engenharia — Colors & Type Tokens
+   Brand: Brazilian engineering firm. Heritage griffin mark.
+   Personality: solid, traditional, confident, technical.
+   ============================================================ */
+
+/* -------- FONT FACES -------- */
+@font-face { font-family: "Sarabun"; src: url("fonts/Sarabun-Thin.ttf") format("truetype"); font-weight: 100; font-style: normal; font-display: swap; }
+@font-face { font-family: "Sarabun"; src: url("fonts/Sarabun-ThinItalic.ttf") format("truetype"); font-weight: 100; font-style: italic; font-display: swap; }
+@font-face { font-family: "Sarabun"; src: url("fonts/Sarabun-ExtraLight.ttf") format("truetype"); font-weight: 200; font-style: normal; font-display: swap; }
+@font-face { font-family: "Sarabun"; src: url("fonts/Sarabun-ExtraLightItalic.ttf") format("truetype"); font-weight: 200; font-style: italic; font-display: swap; }
+@font-face { font-family: "Sarabun"; src: url("fonts/Sarabun-Light.ttf") format("truetype"); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: "Sarabun"; src: url("fonts/Sarabun-LightItalic.ttf") format("truetype"); font-weight: 300; font-style: italic; font-display: swap; }
+@font-face { font-family: "Sarabun"; src: url("fonts/Sarabun-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Sarabun"; src: url("fonts/Sarabun-Italic.ttf") format("truetype"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Sarabun"; src: url("fonts/Sarabun-Medium.ttf") format("truetype"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Sarabun"; src: url("fonts/Sarabun-MediumItalic.ttf") format("truetype"); font-weight: 500; font-style: italic; font-display: swap; }
+@font-face { font-family: "Sarabun"; src: url("fonts/Sarabun-SemiBold.ttf") format("truetype"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Sarabun"; src: url("fonts/Sarabun-SemiBoldItalic.ttf") format("truetype"); font-weight: 600; font-style: italic; font-display: swap; }
+@font-face { font-family: "Sarabun"; src: url("fonts/Sarabun-Bold.ttf") format("truetype"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Sarabun"; src: url("fonts/Sarabun-BoldItalic.ttf") format("truetype"); font-weight: 700; font-style: italic; font-display: swap; }
+@font-face { font-family: "Sarabun"; src: url("fonts/Sarabun-ExtraBold.ttf") format("truetype"); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: "Sarabun"; src: url("fonts/Sarabun-ExtraBoldItalic.ttf") format("truetype"); font-weight: 800; font-style: italic; font-display: swap; }
+
+@font-face { font-family: "Disket Mono"; src: url("fonts/Disket-Mono-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Disket Mono"; src: url("fonts/Disket-Mono-Bold.ttf") format("truetype"); font-weight: 700; font-style: normal; font-display: swap; }
+
+:root {
+  /* ============================================================
+     COLOR TOKENS
+     ============================================================ */
+
+  /* Brand primaries */
+  --grifo-navy:        #15263A;   /* primary brand — wordmark, body text */
+  --grifo-navy-deep:   #0D1A2A;   /* deeper navy for backgrounds */
+  --grifo-navy-soft:   #233A56;   /* hover / lifted surfaces */
+  --grifo-gold:        #A07A2C;   /* griffin gold — accents, marks */
+  --grifo-gold-bright: #C49A45;   /* hover/highlight gold */
+  --grifo-gold-deep:   #7E5F1F;   /* pressed / shadow gold */
+
+  /* Neutrals (warm, paper-feel — pulled from logo cream) */
+  --grifo-bone:        #F5F1EA;   /* page bg light */
+  --grifo-cream:       #E8E1D2;   /* card bg, dim text on dark */
+  --grifo-stone:       #C9C1B2;   /* borders, muted */
+  --grifo-graphite:    #4A5568;   /* secondary text */
+  --grifo-ink:         #15263A;   /* same as navy — primary ink */
+  --grifo-white:       #FFFFFF;
+
+  /* Semantic (muted, sober — to match engineering tone) */
+  --grifo-success:     #4F7A4A;   /* construction green */
+  --grifo-warning:     #B8842A;   /* warm amber, sibling to gold */
+  --grifo-danger:      #A2382F;   /* terra red */
+  --grifo-info:        #2E5C82;   /* steel blue */
+
+  /* Foreground / background semantic */
+  --fg-1: var(--grifo-navy);          /* primary text */
+  --fg-2: var(--grifo-graphite);      /* secondary text */
+  --fg-3: #7A8290;                    /* tertiary / placeholder */
+  --fg-on-dark:    var(--grifo-bone);
+  --fg-on-dark-2:  rgba(245,241,234,.72);
+  --fg-on-dark-3:  rgba(245,241,234,.48);
+  --fg-accent:     var(--grifo-gold);
+
+  --bg-1: var(--grifo-bone);          /* page */
+  --bg-2: var(--grifo-white);         /* cards */
+  --bg-3: var(--grifo-cream);         /* dim panels */
+  --bg-dark-1: var(--grifo-navy);
+  --bg-dark-2: var(--grifo-navy-deep);
+  --bg-dark-3: var(--grifo-navy-soft);
+
+  --border-1: var(--grifo-stone);
+  --border-2: rgba(21,38,58,.12);
+  --border-strong: var(--grifo-navy);
+  --border-on-dark: rgba(245,241,234,.16);
+
+  /* ============================================================
+     TYPE TOKENS
+     ============================================================ */
+
+  --font-display: "Disket Mono", "Space Mono", ui-monospace, monospace;
+  --font-body:    "Sarabun", "Segoe UI", system-ui, sans-serif;
+  --font-mono:    "Disket Mono", ui-monospace, monospace;
+
+  /* Type scale (rem-based, body=16px) */
+  --fs-12: 0.75rem;
+  --fs-14: 0.875rem;
+  --fs-16: 1rem;
+  --fs-18: 1.125rem;
+  --fs-20: 1.25rem;
+  --fs-24: 1.5rem;
+  --fs-32: 2rem;
+  --fs-40: 2.5rem;
+  --fs-56: 3.5rem;
+  --fs-72: 4.5rem;
+  --fs-96: 6rem;
+
+  /* Weights */
+  --fw-thin: 100;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+
+  /* Line heights */
+  --lh-tight: 1.05;
+  --lh-snug: 1.2;
+  --lh-normal: 1.5;
+  --lh-loose: 1.7;
+
+  /* Letter spacing — Disket Mono wordmark always wide */
+  --ls-tight: -0.01em;
+  --ls-normal: 0;
+  --ls-wide: 0.08em;
+  --ls-wider: 0.18em;   /* "ENGENHARIA" treatment */
+  --ls-widest: 0.32em;
+
+  /* ============================================================
+     SPACING / RADII / SHADOWS / MOTION
+     ============================================================ */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+
+  /* Engineering = restrained corners. Mostly squared, gentle on cards. */
+  --radius-0: 0;
+  --radius-1: 2px;
+  --radius-2: 4px;
+  --radius-3: 8px;
+  --radius-4: 12px;
+  --radius-pill: 999px;
+
+  --shadow-1: 0 1px 2px rgba(21,38,58,.06), 0 1px 1px rgba(21,38,58,.04);
+  --shadow-2: 0 4px 12px rgba(21,38,58,.08), 0 2px 4px rgba(21,38,58,.05);
+  --shadow-3: 0 12px 32px rgba(21,38,58,.14), 0 4px 8px rgba(21,38,58,.06);
+  --shadow-4: 0 24px 60px rgba(21,38,58,.22);
+  --shadow-inset: inset 0 1px 0 rgba(255,255,255,.6);
+  --shadow-gold-glow: 0 0 0 3px rgba(160,122,44,.2);
+
+  --ease-out: cubic-bezier(.2,.7,.2,1);
+  --ease-in-out: cubic-bezier(.4,.1,.2,1);
+  --dur-fast: 120ms;
+  --dur-base: 220ms;
+  --dur-slow: 420ms;
+}
+
+/* ============================================================
+   SEMANTIC TYPE STYLES
+   ============================================================ */
+.h-display, h1.display {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: clamp(2.5rem, 6vw, var(--fs-96));
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-wide);
+  color: var(--fg-1);
+  text-transform: uppercase;
+}
+h1, .h1 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-56);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--fg-1);
+}
+h2, .h2 {
+  font-family: var(--font-body);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-40);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-tight);
+  color: var(--fg-1);
+}
+h3, .h3 {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-24);
+  line-height: var(--lh-snug);
+  color: var(--fg-1);
+}
+h4, .h4 {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-18);
+  line-height: var(--lh-snug);
+  color: var(--fg-1);
+}
+.eyebrow, .h-eyebrow {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-12);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--fg-accent);
+}
+p, .body {
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-16);
+  line-height: var(--lh-normal);
+  color: var(--fg-1);
+}
+.lead {
+  font-family: var(--font-body);
+  font-weight: var(--fw-light);
+  font-size: var(--fs-20);
+  line-height: var(--lh-normal);
+  color: var(--fg-2);
+}
+small, .small, .caption {
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-14);
+  line-height: var(--lh-normal);
+  color: var(--fg-2);
+}
+.label {
+  font-family: var(--font-display);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-12);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--fg-2);
+}
+code, kbd, .mono {
+  font-family: var(--font-mono);
+  font-size: 0.95em;
+  letter-spacing: 0;
+}

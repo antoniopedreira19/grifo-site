@@ -1,0 +1,39 @@
+GRIFO ENGENHARIA — Fotos Site v4 (master files)
+================================================
+
+Use sempre com object-fit: cover; object-position: center no CSS.
+
+FOTOS INDIVIDUAIS LIMPAS (embedded direto do PDF)
+--------------------------------------------------
+antonio-vieira-corredor-amarelo.jpg
+antonio-vieira-sala-azul.jpg
+girassol-biblioteca.jpg
+girassol-rooftop.jpg
+girassol-atrio.jpg
+anglo-corredor.jpg
+anglo-salao.jpg
+anglo-patio.jpg
+praia-do-forte-sala-adega.jpg
+praia-do-forte-aereo.jpg
+praia-do-forte-piscina-infinita.jpg
+
+CROPS DAS COMPOSIÇÕES (foto-âncora de cada slide)
+--------------------------------------------------
+community-auditorio.jpg
+antonio-vieira-sala-aula.jpg
+rembrandt-fachada.jpg
+girassol-biblioteca-bruto.jpg
+escola-park-fachada.jpg
+anglo-patio-bruto.jpg
+lapidare-entrada.jpg
+lapidare-corredor.jpg
+saude-recepcao.jpg
+ftc-unex-drone.jpg
+ftc-unex-patio.jpg
+cantina-volpi.jpg
+praia-do-forte-piscina-aerea.jpg
+refugio-da-vila-piscina.jpg
+agromix-fachada.jpg
+caffeine-army-escritorio.jpg
+tecmar-galpao.jpg
+emec-armacao.jpg

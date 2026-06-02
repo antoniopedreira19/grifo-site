@@ -1,0 +1,51 @@
+GRIFO ENGENHARIA — Fotos Site v5 (master files)
+=================================================
+Use sempre com object-fit: cover; object-position: center no CSS.
+Para os avatares de cliente: border-radius: 50% no container (vira círculo).
+
+PORTFÓLIO — FOTOS INDIVIDUAIS LIMPAS (embedded)
+------------------------------------------------
+antonio-vieira-corredor-amarelo.jpg
+antonio-vieira-sala-azul.jpg
+girassol-biblioteca.jpg
+girassol-rooftop.jpg
+girassol-atrio.jpg
+anglo-corredor.jpg
+anglo-salao.jpg
+anglo-patio.jpg
+praia-do-forte-sala-adega.jpg
+praia-do-forte-aereo.jpg
+praia-do-forte-piscina-infinita.jpg
+
+PORTFÓLIO — CROPS DAS COMPOSIÇÕES
+----------------------------------
+community-auditorio.jpg
+antonio-vieira-sala-aula.jpg
+rembrandt-fachada.jpg
+girassol-biblioteca-bruto.jpg
+escola-park-fachada.jpg
+anglo-patio-bruto.jpg
+lapidare-entrada.jpg
+lapidare-corredor.jpg
+saude-recepcao.jpg
+ftc-unex-drone.jpg
+ftc-unex-patio.jpg
+cantina-volpi.jpg
+praia-do-forte-piscina-aerea.jpg
+refugio-da-vila-piscina.jpg
+agromix-fachada.jpg
+caffeine-army-escritorio.jpg
+tecmar-galpao.jpg
+emec-armacao.jpg
+
+AVATARES DE CLIENTE (depoimentos) — usar com border-radius: 50%
+---------------------------------------------------------------
+flavia-del-vale.jpg          (Lapidare — Saúde/Educação Médica)
+daniel-vianna.jpg            (UNIFTC — Educacional)
+christiane-nogara.jpg        (Jovié — Saúde/Educação)
+
+CAPAS DE MATÉRIAS (Grifo na Mídia)
+-----------------------------------
+midia-editora-alma.jpg          (matéria Editora ALMA)
+midia-casas-conceito-2023.jpg   (matéria Casas Conceito 2023)
+midia-alo-alo-bahia.jpg         (matéria Alô Alô Bahia/Lapidare)
