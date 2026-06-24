@@ -158,7 +158,7 @@ function SectorBlock({ data, photoPosition, bg, screenLabel }) {
             )}
 
             <div className="ar-sector__cta">
-              <a href="/fale-conosco" className="btn btn-primary">{data.cta} <ArIcon.arrow size={14}/></a>
+              <a href="#contato" className="btn btn-primary">{data.cta} <ArIcon.arrow size={14}/></a>
             </div>
           </div>
 

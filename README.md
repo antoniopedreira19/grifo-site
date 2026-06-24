@@ -10,7 +10,6 @@ grifo-site/
 ├── areas-de-atuacao.html
 ├── cases.html
 ├── clientes.html               # redirect → /cases#clientes
-├── fale-conosco.html
 ├── grifo-real-estate.html
 ├── manifesto.html
 ├── modelo-grifo.html
@@ -34,7 +33,6 @@ grifo-site/
 │   │   ├── areas-de-atuacao.jsx
 │   │   ├── cases.jsx               # importa de clientes.jsx
 │   │   ├── clientes.jsx            # módulo (sem entry)
-│   │   ├── fale-conosco.jsx
 │   │   ├── grifo-real-estate.jsx
 │   │   ├── manifesto.jsx
 │   │   ├── modelo-grifo.jsx

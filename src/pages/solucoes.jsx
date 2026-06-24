@@ -181,7 +181,7 @@ function SolutionFast() {
             </div>
 
             <div className="sol__cta">
-              <a href="/fale-conosco" className="btn btn-primary">Conhecer o método em detalhe <SolIcon.arrow size={14} /></a>
+              <a href="#contato" className="btn btn-primary">Conhecer o método em detalhe <SolIcon.arrow size={14} /></a>
             </div>
           </div>
 
@@ -246,7 +246,7 @@ function SolutionComplete() {
             </ul>
 
             <div className="sol__cta">
-              <a href="/fale-conosco" className="btn btn-primary">Apresentar projeto para avaliação <SolIcon.arrow size={14} /></a>
+              <a href="#contato" className="btn btn-primary">Apresentar projeto para avaliação <SolIcon.arrow size={14} /></a>
             </div>
           </div>
 
@@ -285,7 +285,7 @@ function SolutionProjects() {
               a lacuna entre prancheta e canteiro.
             </p>
             <div className="sol__cta">
-              <a href="/fale-conosco" className="btn btn-primary">Apresentar projeto para parecer técnico <SolIcon.arrow size={14} /></a>
+              <a href="#contato" className="btn btn-primary">Apresentar projeto para parecer técnico <SolIcon.arrow size={14} /></a>
             </div>
           </div>
 
@@ -345,7 +345,7 @@ function SolutionFinance() {
             )}
           </ul>
 
-          <a href="/fale-conosco" className="btn btn-gold sol__navy-cta">
+          <a href="#contato" className="btn btn-gold sol__navy-cta">
             Conhecer as estruturas de financiamento <SolIcon.arrow size={14} />
           </a>
           <p className="sol__navy-note">Nosso time retorna em até 24h com uma primeira análise.</p>

@@ -5,7 +5,8 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/clientes", "destination": "/cases#clientes", "permanent": true }
+    { "source": "/clientes", "destination": "/cases#clientes", "permanent": true },
+    { "source": "/fale-conosco", "destination": "/#contato", "permanent": true }
   ],
   "headers": [
     {

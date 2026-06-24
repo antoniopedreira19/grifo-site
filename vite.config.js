@@ -43,7 +43,6 @@ export default defineConfig({
         areas: resolve(__dirname, 'areas-de-atuacao.html'),
         cases: resolve(__dirname, 'cases.html'),
         clientes: resolve(__dirname, 'clientes.html'),
-        fale: resolve(__dirname, 'fale-conosco.html'),
         realEstate: resolve(__dirname, 'grifo-real-estate.html'),
         manifesto: resolve(__dirname, 'manifesto.html'),
         modelo: resolve(__dirname, 'modelo-grifo.html'),

@@ -213,7 +213,7 @@ function ModeloBhag() {
             <div className="lab">Meta de faturamento gerado para clientes até 2040</div>
           </div>
 
-          <a href="/fale-conosco" className="btn btn-gold sol__navy-cta">
+          <a href="#contato" className="btn btn-gold sol__navy-cta">
             Falar com a engenharia <MgIcon.arrow size={14}/>
           </a>
         </div>
@@ -243,7 +243,7 @@ function ModeloClosure() {
             arquitetura.
           </p>
           <div className="mg-closure__cta">
-            <a href="/fale-conosco" className="btn btn-primary">
+            <a href="#contato" className="btn btn-primary">
               Falar com a engenharia <MgIcon.arrow size={14}/>
             </a>
           </div>

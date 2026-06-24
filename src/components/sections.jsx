@@ -93,7 +93,7 @@ const MENU_LINKS = [
 { id: "cases", label: "Cases", href: "/cases" },
 { id: "real-estate", label: "Real Estate", href: "/grifo-real-estate" },
 { id: "manifesto", label: "Manifesto", href: "/manifesto" },
-{ id: "contato", label: "Contato", href: "/fale-conosco" }];
+{ id: "contato", label: "Contato", href: "#contato" }];
 
 
 /* ============================================================
@@ -489,20 +489,52 @@ function CTABand({ title, lead } = {}) {
             <h2 className="ctaband__title">{finalTitle}</h2>
             <p className="ctaband__lead">{finalLead}</p>
             <div className="ctaband__actions">
-              <a href="/fale-conosco" className="btn btn-gold">Falar com a engenharia <span className="arr"><Icon.arrow size={14} /></span></a>
-              <a href="/fale-conosco" className="btn btn-ghost-light">Apresentar um projeto</a>
+              <a
+                href="https://inlead.digital/grifo-orcamento/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-gold">
+                Solicite seu orçamento <span className="arr"><Icon.arrow size={14} /></span>
+              </a>
+              <a
+                href="https://inlead.digital/grifo-projeto/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-ghost-light">
+                Tire o seu projeto do papel
+              </a>
             </div>
           </div>
 
           <div className="ctaband__rhs">
-            <div className="lab">Atendimento direto</div>
+            <div className="lab">Prefere contato direto?</div>
             <h3>Comercial e Engenharia falando com você na primeira ligação.</h3>
             <p>Não passamos seu projeto entre departamentos. O engenheiro responsável retorna o contato.</p>
             <ul className="ctaband__contacts">
-              <li><span className="lab">Telefone</span><span>+55 71 9742-0802</span></li>
-              <li><span className="lab">WhatsApp</span><span>+55 71 9742-0802</span></li>
-              <li><span className="lab">E-mail</span><span>contato@grifoengenharia.com.br</span></li>
-              <li><span className="lab">Sede</span><span>Salvador, BA</span></li>
+              <li>
+                <span className="lab">Telefone</span>
+                <a href="tel:+557197420802">+55 71 9742-0802</a>
+              </li>
+              <li>
+                <span className="lab">WhatsApp</span>
+                <a href="https://wa.me/557197420802" target="_blank" rel="noopener noreferrer">+55 71 9742-0802</a>
+              </li>
+              <li>
+                <span className="lab">E-mail</span>
+                <a href="mailto:contato@grifoengenharia.com.br">contato@grifoengenharia.com.br</a>
+              </li>
+              <li>
+                <span className="lab">Sede</span>
+                <span>Rua Jacobina, 66 · 3º andar · Salvador, BA</span>
+              </li>
+              <li>
+                <span className="lab">Escritório SP</span>
+                <span>Rua Funchal, 263 · Vila Olímpia, SP</span>
+              </li>
+              <li>
+                <span className="lab">Horário</span>
+                <span>Seg–sex, 8h às 17h · Retorno no próximo dia útil fora do horário</span>
+              </li>
             </ul>
           </div>
         </div>
@@ -647,8 +679,8 @@ function MobileNav({ active = "home" }) {
             className={l.id === active ? "active" : ""}
             onClick={() => setOpen(false)}>{l.label}</a>
           )}
-          <a href="/fale-conosco" className="nav-drawer__cta" onClick={() => setOpen(false)}>
-            Falar com a engenharia <Icon.arrow size={16} />
+          <a href="#contato" className="nav-drawer__cta" onClick={() => setOpen(false)}>
+            Falar com a Grifo <Icon.arrow size={16} />
           </a>
         </nav>
       </div>
@@ -677,8 +709,8 @@ function NavFullbleed({ active = "home" } = {}) {
           <a key={l.id} href={l.href} className={l.id === active ? "active" : ""}>{l.label}</a>
           )}
         </nav>
-        <a href="/fale-conosco" className="hero-fb__cta">
-          Falar com a engenharia <Icon.arrow size={14} />
+        <a href="#contato" className="hero-fb__cta">
+          Falar com a Grifo <Icon.arrow size={14} />
         </a>
         <MobileNav active={active} />
       </header>
@@ -713,8 +745,8 @@ function HeroFullbleed() {
           <a key={l.id} href={l.href} className={l.id === "home" ? "active" : ""}>{l.label}</a>
           )}
         </nav>
-        <a href="/fale-conosco" className="hero-fb__cta">
-          Falar com a engenharia <Icon.arrow size={14} />
+        <a href="#contato" className="hero-fb__cta">
+          Falar com a Grifo <Icon.arrow size={14} />
         </a>
         <MobileNav active="home" />
       </header>
@@ -740,8 +772,8 @@ function HeroFullbleed() {
             <a href="/modelo-grifo" className="hero-fb__btn hero-fb__btn--gold">
               Conhecer o Modelo Grifo <Icon.arrow size={16} />
             </a>
-            <a href="/fale-conosco" className="hero-fb__btn hero-fb__btn--ghost">
-              Falar com a engenharia <Icon.arrow size={16} />
+            <a href="#contato" className="hero-fb__btn hero-fb__btn--ghost">
+              Falar com a Grifo <Icon.arrow size={16} />
             </a>
           </div>
         </div>
